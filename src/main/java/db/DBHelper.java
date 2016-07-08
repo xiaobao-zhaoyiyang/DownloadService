@@ -31,7 +31,11 @@ public class DBHelper extends SQLiteOpenHelper {
      */
     public static DBHelper getInstance(Context context){
         if (sHelper == null){
-            sHelper = new DBHelper(context);
+            synchronized (DBHelper.class){
+                if (sHelper == null){
+                    sHelper = new DBHelper(context);
+                }
+            }
         }
         return sHelper;
     }

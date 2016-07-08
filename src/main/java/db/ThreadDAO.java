@@ -10,7 +10,8 @@ import entities.ThreadInfo;
 public interface ThreadDAO {
     /**
      * 插入线程信息
-     * @param threadInfo
+     * @param threadInfo   34004600
+     *                     2147483647
      */
     public void insertThread(ThreadInfo threadInfo);
 
